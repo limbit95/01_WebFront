@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_HTML 연습문제3</title>
+</head>
+<body>
+    
+    <form>
+        <h1>회원 가입</h1>
+
+        <fieldset>
+            <legend>필수 입력 정보</legend>
+
+            <!-- tr 태그 : 행 나누기 -->
+            <!-- td 태그 : 열 나누기 -->
+            <!-- input 디폴트 타입 : 텍스트, 텍스트 선언 생략 가능 -->
+            <!-- button 타입 기본값 : tyep=submit, input 박스 안의 입력 정보를 서버로 전송해주는 
+                                    type=button 아무 기능 없는 버튼-->
+            <!-- input 태그 안의 placeholder : input 박스 안의 회색 글자 표기 -->
+            <table>
+                <tr> <!-- 1행 -->
+                    <th>ID</th>
+                    <td>
+                        <input type="test" placeholder="아이디 10글자 이내" name="id">
+                    </td>
+                    <td>
+                        <button type="button">중복 확인</button>
+                    </td>
+                </tr> 
+
+                <!-- rowspan 상하 병합
+                    colspan 좌우 병합
+                    input size="input 박스 크기 조절"
+                -->
+                <tr> <!-- 2행 -->
+                    <th>비밀번호</th>
+                    <td colspan="2">
+                        <input type="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상" size="30">
+                    </td>
+                </tr> 
+
+                <tr> <!-- 3행 -->
+                    <th>비밀번호 확인</th>
+                    <td colspan="2">
+                        <input type="password" size="30">
+                    </td>
+                </tr> 
+
+                <tr> <!-- 4행 -->
+                    <th>Email</th>
+                    <td>
+                        <input type="email">
+                    </td>
+                    <td>
+                        <select> 
+                            <option>naver.com</option>
+                            <option>daum.net</option>
+                            <option selected>직접 입력</option> <!--selected : 옵션 중 가장 먼저 상단 선택되게끔 명령-->
+                        </select>
+                    </td>
+                </tr> 
+
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
