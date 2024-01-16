@@ -1,0 +1,32 @@
+/* 5순위 : 태그 선택자 */
+div {
+    width: 200px;
+    height: 200px;
+    background-color: red !important;
+}
+
+/* 4순위 : 클래스 선택자 */
+.cls1 {
+    background-color: green;
+}
+
+.cls1 {
+    background-color: yellow;
+    /* 동일한 우선순위에선 마지막에 작성된 설정값이 적용됨 */
+}
+
+/* 3순위 : 아이디 선택자 */
+#test1 {
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+/* 2순위 : inline-style 속성 */
+/* html파일에 직접 입력한 값이 적용됨 
+해당 태그 안의 style 값으로 지정된 속성 적용*/
+
+/* 1순위 : css속성값 (!important0 */
+/* 가장 1순위로 하고 싶은 속성값 오른쪽에 !important를 선언해주면 그 속성값이 1순위로 적용됨 */
+/* ex) 5순위의 스타일 선언문의 여럿 속성값들 중 background-color만 1순위로 적용하고 싶을때
+       background-color: red !important; 이렇게 선언해주면 1순위로 적용됨 */
