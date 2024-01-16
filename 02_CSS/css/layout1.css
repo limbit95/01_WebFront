@@ -92,3 +92,21 @@
 #container-3 > .div-3:last-child {
     background-color: blue;
 }
+
+
+/* visibility: hidden */
+.div-4 {
+    border: 3px solid black;
+    height: 100px;
+}
+
+#test4 {
+    background-color: deeppink;
+
+    /* visibility: hidden;  */  
+    /* 말 그대로 투명 / 하지만 display: none은 굳이 말하면 투명이 아니다 */
+    
+    display: none; 
+    /* 화면 자체에서 사라지지만 데이터가 사라진 것은 아님(개발자 도구를 통해 소스코드를 보면 남아 있는 걸 확인할 수 있다. */
+}
+
