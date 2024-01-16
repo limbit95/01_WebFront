@@ -1,0 +1,44 @@
+/* :only-child 
+다른 타입의 자식이 있어도 자식을 여럿으로 인식하여 선택이 되지 않는다
+*/
+#test1 > p:only-child {
+    background-color: steelblue;
+}
+
+/* :only-of-type 
+특정 요소의 자식 중 지정된 형태와 같은 자식 요소가 하나만 있을 때 선택
+only-child와 다르게 only-of-type 같은 경우 다른 타입의 자식이 있어도 
+선언한 자식 태그가 하나만 있다면 선택을 함. 하지만 only-of-type 역시 선언한 자식 태그가
+하나만 있는게 아닐 때선택이 되지 않음
+*/
+#test2 > p:only-of-type {
+    background-color: red;
+}
+
+/* :empty :  자식 요소가 없는 요소를 선택*/
+#test3 > p:empty {
+    background-color: greenyellow;
+    height: 30px;
+}
+
+/* 여러 선택자 동시 선택 */
+#test4-1, #test4-2, .test4-3 {
+    background-color: yellow;
+    color: red;
+}
+
+/* 특정 요소 내부에 있는 특정 클래스만 선택하기 */
+/* #test5-1의 후손 중 클래스가 c5인 요소를 선택 */
+#test5-1 .c5{
+    background-color: aqua;
+}
+
+/* #test5-2의 자식 중 클래스가 c5인 li 요소만 선택 */
+#test5-2 > li.c5 {
+    background-color: tomato;
+}
+
+/* 클래스가 여러 개인 요소만 선택 */
+.test6.c6 {
+    background-color: red;
+}

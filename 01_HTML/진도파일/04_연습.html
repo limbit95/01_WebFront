@@ -110,15 +110,76 @@
 
         <table border="1">
             <tr>
-                
+                <th width="70px">이름</th>
+                <th width="210px"></th>
+                <th width="140px" height="140px" rowspan="2">사진</th>
+            </tr>
+
+            <tr>
+                <th>연락처</th>
+                <th>010-1111-1111</th>
+            </tr>
+            
+            <tr>
+                <th height="35px">주소</th>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <th height="140px">자기소개</th>
+                <td colspan="2"></td>
             </tr>
         </table>
 
+        <hr>
+
+        <h2>테이블 구조 설정 태그</h2>
+
+        <pre>
+            thead : 테이블의 상단 부분 영역(컬럼명)
+            tbody : 테이블의 중단 영역(실제 값, 내용)
+            tfoot : 테이블의 하단 부분 영역(합계)
+        </pre>
+
+        <table class="tb3">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>주소</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                    <td>20</td>
+                    <td>서울시 쌍문동</td>
+                </tr>
+                <tr>
+                    <td>고길동</td>
+                    <td>40</td>
+                    <td>서울시 강북구</td>
+                </tr>
+                <tr>
+                    <td>김영희</td>
+                    <td>15</td>
+                    <td>서울시 성동구</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th colspan="2">총인원</th>
+                    <td>3명</td>
+                </tr>
+            </tfoot>
+        </table>
 
 
      
 
 
-
+        <div style="height: 500px;"></div>
 </body>
 </html>

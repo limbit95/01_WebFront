@@ -1,0 +1,95 @@
+/* 일반 구조 선택자 */
+
+
+/* :first-child : 형제 관계의 요소 중 첫 번째 요소를 선택 
+                  첫 번째 요소가 :(콜론) 왼쪽의 해당 태그일 때 선택*/
+#test1 > p:first-child {
+    background-color: red;
+    color: white;
+}
+
+
+/* :last-child : 형제 관계의 요소 중 마지막 요소를 선택
+                 마지막 요소가 :(콜론) 왼쪽의 해당 태그일 때 선택 */
+#test1 > p:last-child {
+    background-color: orange;
+}
+
+
+/* :nth-child(수열)
+    형제 관계 요소 중 지정된 수열번째 요소를 모두 선택
+    - 순서 따질때 1부터 시작
+*/
+#test1 > p:nth-child(2) {
+    /* #test1의 자식 요소 중 2번째 요소를 선택하고 :(콜론) 왼쪽에 선언한 해당 태그인지 검사 */
+    background-color: yellow
+}
+
+#test1 > p:nth-child(4) {
+    background-color: green
+}
+
+/* 홀수번째 형제 요소만 선택 
+    1. (2n-1) / 2. (odd)
+*/
+#test1 > p:nth-child(odd) {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* 짝수번째 형제 요소만 선택
+    1. (2n) / 2. (even)
+*/
+#test1 > p:nth-child(even) {
+    border: 3px solid black;
+}
+
+
+/* :nth-last-child(수열) 
+    형제 관계 요소 중 뒤에서부터 지정된 수열번째 요소를 모두 선택
+    주의 : 해당 속성값의 형제들 중 ()안에 선언한 순서에 있는 
+    :(콜론) 왼쪽에 선언한 해당 태그일 때 그 요소를 선택하는 것임
+*/
+
+#test1 > p:nth-last-child(2) {
+    color: hotpink;
+}
+
+
+
+
+
+/* 형태 구조 선택자 */
+
+/* :first-of-type : 같이 선택된 형제들 중에서 첫 번째 요소 */
+#test2 > p:first-of-type {
+    /* 선언한 p태그들 중에서 가장 첫 번째 p태그를 선택 */
+    background-color: orange;
+}
+
+/* :last-of-type : 같이 선택된 형제들 중에서 마지막 요소 */
+#test2 > p:last-of-type {
+    /* 선언한 p태그들 중에서 마지막 p태그를 선택 */
+    background-color: skyblue;
+}
+
+/* :nth-of-type(수열) : 같이 선택된 형제들 중에서 수열번째 모든 요소 */
+#test2 > p:nth-of-type(odd){
+    font-size: 30px;
+}
+
+/* :nth-last-of-type(수열) : 같이 선택된 형제들 중에서 뒤에서 수열번째 모든요소 */
+#test2 > p:nth-last-of-type(even){
+    background-color: red;
+}
+
+
+
+
+/* 부정 선택자 */
+
+#test3 > li:not(:nth-of-type(3n)) {
+    /* 부모 > 자식에서 : 오른쪽에 선언한 ()안의 요소를 제외한
+                    (조건문 :nth-of-type(3)이면 3의 배수를 제외한 요소만 선택) */
+    background-color: aqua;
+}
