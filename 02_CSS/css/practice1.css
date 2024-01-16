@@ -1,29 +1,78 @@
 .container-1 {
     border: 1px solid black;
-    width: 254px;
-    height: 254px;
+    width: 255px;
+    height: 255px;
 
     position: relative;
 }
 
-.div-1 {
+.div1 {
+    position: absolute;
+}
+
+.div2 {
+    position: absolute;
+    left: 20%;
+}
+
+.div3 {
+    position: absolute;
+    left: 40%;
+}
+
+.div4 {
+    position: absolute;
+    left: 60%;
+}
+
+.div5 {
+    position: absolute;
+    left: 80%;
+}
+
+.div1-1 {
     margin: 1px;
     background-color: tomato;
     width: 50px;
     height: 50px;
-
 }
 
-.div-2 {
+.div2-1{
     margin: 1px;
-    /* background-color: tomato; */
+    background-color: tomato;
     width: 50px;
     height: 50px;
 }
 
-.container-1 > .div-1:nth-child(1) {
-    background-color: white;
-    margin-bottom: 50px;
-    
+.div3-1 {
+    margin: 1px;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
 }
 
+.div4-1 {
+    margin: 1px;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+}
+
+.div5-1 {
+    margin: 1px;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
+}
+
+.container-1 [id=""] {
+    background-color: white;
+}
+
+.container-1 [id="1"] {
+    background-color: tomato;
+}
+
+.container-1 [id="2"] {
+    background-color: green;
+}
