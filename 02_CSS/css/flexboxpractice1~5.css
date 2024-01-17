@@ -1,0 +1,289 @@
+/* 문제1 */
+
+.container-1 {
+    border : 1px solid black;
+    box-sizing: border-box; 
+
+    display: flex;
+
+    width: 800px;
+    height: 500px;
+
+    flex-direction: column;
+}
+
+.header-1, .footer-1 {
+    flex-basis: 20%;
+    background-color: gray;
+}
+
+.body-1 {
+    display: flex;
+    flex-basis: 60%;
+}
+
+.body-1-1 {
+    flex-basis: 30%;
+    background-color: skyblue;
+}
+
+.body-1-2 {
+    flex-basis: 50%;
+    background-color: red;
+}
+
+.body-1-3 {
+    flex-basis: 20%;
+    background-color: blanchedalmond;
+}
+
+/* 문제2 */
+
+.container-2 {
+    border : 1px solid black;
+    box-sizing: border-box; 
+
+    display: flex;
+
+    width: 800px;
+    height: 500px;
+
+    flex-direction: column;
+}
+
+.header-2{
+    flex-basis: 20%;
+    background-color: red;
+}
+
+.body-2 {
+    flex-basis: 80%;
+    display: flex;
+}
+
+.yellow {
+    flex-basis: 30%;
+    background-color: yellow;
+}
+
+.body-2-1 {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+.green {
+    flex-basis: 80%;
+    background-color: green;
+}
+
+.blue {
+    flex-basis: 20%;
+    background-color: blue;
+}
+
+/* 문제3 */
+
+.container-3 {
+    border : 1px solid black;
+    box-sizing: border-box; 
+
+    display: flex;
+
+    width: 800px;
+    height: 500px;
+
+    flex-direction: column;
+}
+
+.yellow3 {
+    background-color: yellow;
+    flex-basis: 30%;
+}
+
+.bluebody3 {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.blue3 {
+    background-color: blue;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.skybluebody3 {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skyblue3 {
+    display: flex;
+    background-color: skyblue;
+    flex-basis: 50%;
+    flex-direction: row-reverse;
+}
+
+.purple3 {
+    background-color: purple;
+    flex-basis: 50%;
+}
+
+.red {
+    background-color: red;
+    flex-basis: 30%;
+}
+
+/* 문제4 */
+
+.container-4 {
+    border : 1px solid black;
+    box-sizing: border-box; 
+
+    display: flex;
+
+    width: 800px;
+    height: 500px;
+
+    flex-direction: column;
+}
+
+.header-4, .footer-4 {
+    flex-basis: 20%;
+    background-color: darkturquoise;
+}
+
+.body-4 {
+    border : 1px solid black;
+    display: flex;
+    flex-basis: 80%;
+    background-color: aqua;
+    flex-direction: row-reverse;
+}
+
+.orange4 {
+    border : 1px solid black;
+    display: flex;
+    flex-basis: 70%;
+    background-color: orange;
+
+    align-items: end;
+    justify-content: space-between;
+}
+
+.item {
+    border: 1px solid black;
+    flex-basis: 30%;
+    width: 30%;
+    height: 50%;
+
+
+}
+
+/* 문제 5 */
+
+.container-5 {
+    border : 1px solid black;
+    box-sizing: border-box; 
+
+    display: flex;
+
+    width: 800px;
+    height: 500px;
+
+    flex-direction: column;
+}
+
+.yellow5 {
+    display: flex;
+    background-color: yellow;
+    flex-basis: 40%;
+    flex-direction: row;
+}
+
+.item5-1, .item5-2, .item5-3 {
+    border: 1px solid black;
+    background-color: yellow;
+    flex-basis: 20%;
+}
+.item5-2 {flex-basis: 40%;}
+.item5-3 {flex-basis: 40%;}
+
+.skyblueAndpink {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.skyblue5 {
+    display: flex;
+    background-color: skyblue;
+    flex-basis: 30%;
+    flex-direction: column;
+}
+
+.skyblue5-1, .skyblue5-2, .skyblue5-3 {
+    border: 1px solid black;
+    background-color: skyblue;
+    flex-basis: 100%;
+}
+
+.pink5 {
+    border : 1px solid black;
+    
+    display: flex;
+    flex-direction: row;
+    flex-basis: 70%;
+}
+
+.pinkHeader, .pinkFooter {
+    display: flex;
+    background-color: pink;
+    flex-basis: 20%;
+    flex-direction: column;
+}
+.pink5-1, .pink5-2, .pink5-3 {
+    border: 1px solid black;
+    background-color: pink;
+    flex-basis: 20%;
+}
+.pink5-2 {flex-basis: 60%;}
+.pink5-3 {flex-basis: 20%;}
+
+.orangeAndgreen {
+    border : 1px solid black;
+    
+    display: flex;
+    flex-basis: 60%;
+    background-color: orange;
+    flex-direction: column-reverse;
+}
+
+.greenAndred {
+    border : 1px solid black;
+    
+    display: flex;
+    flex-basis: 50%;
+    background-color: green;
+    flex-direction: row;
+}
+
+.green5 {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+}
+
+.red5 {
+    background-color: red;
+    flex-basis: 50%;
+}
+
+.green5-1, .green5-2 {
+    border: 1px solid black;
+    flex-basis: 50%;
+
+}

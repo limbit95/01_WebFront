@@ -1,7 +1,7 @@
 .container-1 {
     border: 1px solid black;
-    width: 255px;
-    height: 255px;
+    width: 506px;
+    height: 506px;
 
     position: relative;
 }
@@ -30,39 +30,11 @@
     left: 80%;
 }
 
-.div1-1 {
+.div1-1, .div2-1, .div3-1, .div4-1, .div5-1 {
     margin: 1px;
     background-color: tomato;
-    width: 50px;
-    height: 50px;
-}
-
-.div2-1{
-    margin: 1px;
-    background-color: tomato;
-    width: 50px;
-    height: 50px;
-}
-
-.div3-1 {
-    margin: 1px;
-    background-color: tomato;
-    width: 50px;
-    height: 50px;
-}
-
-.div4-1 {
-    margin: 1px;
-    background-color: tomato;
-    width: 50px;
-    height: 50px;
-}
-
-.div5-1 {
-    margin: 1px;
-    background-color: tomato;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 
 .container-1 [id=""] {
