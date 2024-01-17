@@ -91,6 +91,7 @@
     text-align: center;
 }
 
+/* 지정되어 있는 박스 안의 크기에 맞춰 중간 정렬 */
 #align-test > p:nth-child(4) {
     text-align: justify;
 }
