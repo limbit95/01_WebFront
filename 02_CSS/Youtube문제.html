@@ -15,42 +15,54 @@
         
         <header>
 
-            <!-- 목록 버튼 -->
+            <!-- 1. 목록 버튼 --> 
             <section>
                 <button id="list-btn" class="fa-solid fa-bars"></button>
             </section>
 
-            <!-- 유튜브 로고 및 홈버튼 -->
+            <!-- 2. 유튜브 로고 및 홈버튼 -->
             <section>
                 <a href="https://www.youtube.com">
                     <img src="/images/youtubelogo.png" id="youtube-logo">
                 </a>
             </section>
 
-            <!-- 검색창 -->
+            <!-- 3. 공백 -->
+            <section></section>
+
+            <!-- 4. 검색창 -->
             <section class="search-area">
-                <form action="#" name="search-form">
 
-                    <!-- 검색박스와 오른쪽 키보드 버튼 -->
-                    <fieldset class="search-box">
-
-                        <input type="search" id="query" name="query"
-                        autocomplete="off" placeholder="검색">
+                <section class="searchAndkeyboard">
+                    <form action="#">
                         
-                        <!-- 키보드 -->
-                        <button id="keyboard-btn" class="fa-regular fa-keyboard"></button>
+                        <fieldset>
+                            <input type="search" id="query" name="query"
+                            autocomplete="off" placeholder="검색">
 
-                        <!-- 돋보기 -->
-                        <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>                        
-                    </fieldset>
-                </form>
+                            <button id="keyboard-btn" class="fa-regular fa-keyboard"></button>
+                        </fieldset>
+                        
+                    </form>
+
+                </section>
+                                          
+                <section class="glass">
+                    <button id="glass-btn" class="fa-solid fa-magnifying-glass"></button>  
+                </section>
+
             </section>
 
-            <!-- 음성 검색 버튼, 영상 플러스 버튼, 알림 버튼, 계정 버튼
+            <!-- 5. 음성 버튼 -->
+            <section class="voice-box">
+                <button id="mic-btn" class="fa-solid fa-microphone"></button>
+            </section>
+
+
+            <!--  6. 음성 검색 버튼, 영상 플러스 버튼, 알림 버튼, 계정 버튼
             계정 버튼을 제외한 모든 버튼 마우스 오버 시 텍스트 뜨게끔
             -->
-            <section>
-                <button id="mic-btn" class="fa-solid fa-microphone"></button>
+            <section class="list-btn">
                 <button id="camera-btn" class="fa-solid fa-video"></button>
                 <button id="bell-btn" class="fa-regular fa-bell"></button>
                 <button id="user-btn" class="fa-solid fa-user"></ㅠ>
@@ -58,11 +70,103 @@
 
         </header>
 
-        <section>
 
-        </section>
+        <section class="body">
 
-        <section>
+            <!-- 왼쪽화면 -->
+            <section class="bodyLeft">
+                
+                <!-- 유튜브 영상 -->
+                <section class="video">
+                    
+                    <video width="800px" height="500px" src="https://youtu.be/PLT2jNEC7Nc" controls autoplay></video>
+
+                </section>
+
+                <!-- 영상 정보 -->
+                <section class="info">
+                    
+                    <section class="title">
+                        <h2>[한글자막] 한예슬에게'그댄 달라요' 음원 수익을 묻다</h2>
+                    </section>
+
+                    <section class="select">
+                        
+                        <!-- 유튜브 채널 로고 -->
+                        <section>
+                            <a href="https://www.youtube.com/@PsickUniv">
+                                <img src="/images/피식logo.jpg" alt="">
+                            </a>
+                        </section>
+
+                        <!-- 유튜브 채널 이름과 구독자 수 -->
+                        <section>
+                            <a href="https://www.youtube.com/@PsickUniv">피식대학Psick...</a>
+                            <p>구독자 283만명</p>
+                        </section>
+
+                        <!-- 구독 여부 버튼 -->
+                        <section>
+
+                            <section class="bell-btn">
+                                <img src="/images/bell.jpg">
+                                <p>구독중</p>
+                                <img src="/images/downarrow.jpg">
+                            </section>
+                            
+                        </section>
+
+                        <!-- 좋아요 / 싫어요 -->
+                        <section>
+                            <button class="fa-regular fa-thumbs-up"></button>
+                            <p>1.9만</p>
+                            <button class="fa-regular fa-thumbs-down"></button>
+                        </section>
+
+                        <!-- 공유 버튼 -->
+                        <section>
+                            <button class="fa-solid fa-share"></button>
+                            <p>공유</p>
+                        </section>
+
+                        <!-- 기타 목록 버튼 -->
+                        <section></section>
+                            <button class="fa-solid fa-ellipsis"></button>
+                        <section></section>
+
+                    </section>
+
+                    <!-- 영상 관련 정보 -->
+                    <section class="content">
+                        <p>조회수 146만회 3일 전 #피식쇼 #한예슬 #피식대학</p>
+                        <a href="#">#피식대학</a> <a href="#">#피식쇼</a> <a href="#">#한예슬</a> <a href="#">#고메소바바치킨</a>
+                        <br>
+                        <p>Follow the host of PSICK SHOW on instagram right now!</p>
+                    </section>
+
+                </section>
+
+                <!-- 댓글 관련 정보 -->
+                <section class="comment">
+                    
+                    <!-- 댓글 개수 / 정렬 기준 버튼 -->
+                    <section></section>
+
+                    <!-- 댓글 달기 입력창 -->
+                    <section></section>
+                    
+                    <!-- 댓글 현황 리스트 -->
+                    <section></section>
+
+                </section>
+
+            </section>
+
+
+            <!-- 광고 및 다른 동영상 리스트 -->
+            <section class="bodyRight">
+
+            </section>
 
         </section>
 

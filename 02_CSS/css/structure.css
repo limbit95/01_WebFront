@@ -264,3 +264,49 @@ footer span {
     padding: 0 10px;
 }
 
+
+/* 
+반응형 모바일 기준 
+- 해상도 767px 이하면 무조건 여기 작성된대로 css 적용해라
+*/
+
+@media all and (max-width: 767px) {
+    
+    main {
+        width: 100vw;
+    }
+
+    header {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        border-bottom: none;
+        height: auto;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav li {
+        flex-basis: auto;
+        border-bottom: 1px solid #a3add342;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    footer > * {
+        font-size: 12px;
+    }
+}
+
+/* 태블릿 */
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    /* 원하는 스타일 입력 */
+}

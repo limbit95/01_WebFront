@@ -1,0 +1,57 @@
+header > .search-area {
+    display: flex;
+}
+
+.search-area :first-of-type {
+    flex-basis: 90%;
+}
+
+.search-area :last-of-type {
+    flex-basis: 10%;
+}
+
+/* 검색 input, 키보드 버튼 영역 */
+.search-area :first-of-type fieldset {
+    border: 1px solid gray;
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 600px;
+    height: 50px;
+
+    display: flex;
+}
+/* 검색 박스 안의 input */
+fieldset :first-child {
+    flex-basis: 85%;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+}
+/* 키보드 버튼 영역 */
+fieldset :last-child {
+    flex-basis: 10%;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+/* 키보드 속성 */
+.search-box section #keyboard-btn {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 돋보기 영역 */
+
+.glass-box {
+
+}
+
+#glass-btn {
+    flex-basis: 20%;
+    border: 1px solid gray;
+    border-left: none;
+    border-end-end-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: lightgray;
+}
