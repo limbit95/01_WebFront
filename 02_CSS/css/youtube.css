@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+
+    /* border: 1px solid black; */
+}
+
+body {
+    margin: 10px;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+}
+
+header > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > section:nth-child(1) {
+    flex-basis: 2%;
+}
+header > section:nth-child(2) {
+    flex-basis: 8%;
+    justify-content: start;
+}
+header > section:nth-child(3) {
+    flex-basis: 50%;
+}
+header > section:nth-child(4) {
+    flex-basis: 40%;
+}
+
+/* 목록 버튼 */
+#list-btn {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* 유튜브 로고 */
+#youtube-logo {
+    width: 120px;
+    height: 50px;
+}
+
+header > .search-area {
+    display: flex;
+}
+
+/* 검색 박스 전체 틀(fieldset) */
+.search-box {
+    border: 1px solid gray;
+    border-radius: 20px;
+}
