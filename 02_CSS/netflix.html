@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix</title>
+
+    <link rel="stylesheet" href="css/netflix.css">
+
+    <!-- Font Awesome 에서 로고 가져와 사용하려면 아래 해당 태그 있어야 함-->
+    <script src="https://kit.fontawesome.com/4a8589de03.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- 상단 헤드 -->
+        <nav>
+            <!-- 넷플릭스 로고 -->
+            <a href="#">
+                <img src="/images/netflix-logo.png" id="logo">
+            </a>
+
+            <!-- 메뉴바 -->
+            <ul>
+                <li>TV 프로그램</li>
+                <li>영화</li>
+                <li>최산 등록 콘텐츠</li>
+                <li>내가 찜한 콘텐츠</li>
+            </ul>
+
+            <!-- 오른쪽 설정버튼 및 검색버튼 -->
+            <div class="icon-box">
+                <div>
+                    <i class="fa-solid fa-display"></i>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                    
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- 영화 배너(몸통부분) -->
+        <section class="banner">
+
+            <!-- 영화 배너 위에 올라갈 영화 정보 및 버튼 -->
+            <div class="title-box">
+
+                <!-- 영화 제목 -->
+                <h1>기생충</h1>
+
+                <!-- 영화 소개글 -->
+                <p>
+                    "폐 끼치고 싶진 않았어요."
+                    전원백수로 살 길 막막하지만 사이는 좋은 기택(송강호) 가족.
+                    장남 기우(최우식)에게 명문대생 친구 민혁(박서준)이 연결시켜준 고액 과외 자리는
+                    모처럼 싹튼 고정수입의 희망이다.
+                    온 가족의 도움과 기대 속에 박 사장(이선균) 집으로 향하는 기우.
+                    글로벌 IT 기업 CEO인 박 사장의 저택에 도착하자
+                    젊고 아름다운 사모님 연교(조여정)가 기우를 맞이한다.
+                </p>
+
+                <!-- 재생, 내가 찜한 콘텐츠 버튼 -->
+                <div class="title-box-btn">
+                    <button>재생</button>
+                
+                    <button>내가 찜한 콘텐츠</button>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <!-- contents 영역 -->
+        <main>
+            <!-- 상단 -->
+            <section class="contents-box">
+                <h2>오늘 한국의 TOP 10 콘텐츠</h2>
+
+                <!-- 영화 컨텐츠 작은 배너들 -->
+                <section>
+                    <div class="poster-box">
+                        <p>1</p>
+                        <div>
+                            <img src="/images/해리.jpg">
+                        </div>
+                    </div>
+                    <div class="poster-box">
+                        <p>2</p>
+                        <div>
+                            <img src="/images/해리.jpg">
+                        </div>
+                    </div>
+                    <div class="poster-box">
+                        <p>3</p>
+                        <div>
+                            <img src="/images/해리.jpg">
+                        </div>
+                    </div>
+                    <div class="poster-box">
+                        <p>4</p>
+                        <div>
+                            <img src="/images/해리.jpg">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 하단 -->
+            <section class="contents-box">
+                <h2>지금 뜨는 콘텐츠</h2>
+
+                <!-- 영화 컨텐츠 작은 배너들 -->
+                <section class="poster-boxes">
+                    <div><img src="/images/해리.jpg"></div>
+                    <div><img src="/images/해리.jpg"></div>
+                    <div><img src="/images/해리.jpg"></div>
+                    <div><img src="/images/해리.jpg"></div>
+                    <div><img src="/images/해리.jpg"></div>
+                </section>
+            </section>
+        </main>
+
+    </div>
+    
+</body>
+</html>

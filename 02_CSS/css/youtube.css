@@ -209,81 +209,129 @@ fieldset {
 
 }
 
-.select :nth-child(1){flex-basis: 5%;} 
-.select :nth-child(2){flex-basis: 20%;}
-.select :nth-child(3){flex-basis: 20%;}
-.select :nth-child(4){flex-basis: 10%;}
-.select :nth-child(5){flex-basis: 10%;}
-.select :nth-child(6){flex-basis: 10%;}
-.select :nth-child(7){flex-basis: 20%;}
-.select :nth-child(8){flex-basis: 5%;}
+/* 채널로고, 채널명, 구독자수, 구독중 버튼 | 좋아요/싫어요 버튼, 공유 버튼, 설정 버튼 을 담는 전체 영역 */
+.select {
+    display: flex;
+}
+.select > :nth-child(1) {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+}
+.select > :nth-child(1) a {
+    display: flex;
+    align-items: center;
+}
 
 /* 채널명, 구독자수 */
-.select :nth-child(2) {
+.selectLeft > :nth-child(2) {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin: 0;
+    margin-left: 5px;
 }
-.select :nth-child(2) > a {
+.selectLeft > :nth-child(2) h {
+    font-size: 14px;
+}
+.selectLeft :nth-child(2) > a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 19px;
     color: black;
 }
-.select :nth-child(2) > p {
+.selectLeft :nth-child(2) > p {
     font-size: 13px;
     text-align: start;
     margin-left: 8px;
 }
 
-
-/* 구독중 버튼 */
-.select :nth-of-type(3) {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
+/* 구독중 버튼 전체 영역*/
 .bell-btn {
     display: flex;
     align-items: center;
     cursor: pointer;
-    height: 45px;
+    height: 40px;
     border: 10px solid transparent;
     border-radius: 50px;
+    margin-left: 20px;
 }
+/* 벨, 다운 애로우 */
 .bell-btn :nth-child(1) , 
 .bell-btn :nth-child(3) {
     flex-basis: 10%;
-    font-size: 25px;
+    font-size: 20px;
     background-color: transparent;
 }
+/* "구독중" */
 .bell-btn :nth-child(2) {
     flex-basis: 80%;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+    margin: 10px;
 }
-
 .bell-btn pre {
     font-size: 18px;
 }
 
-/* 좋아요 / 싫어요 */
-.select :nth-child(5){
+/* selectRight : 공백 / 좋아요, 싫어요, 공유 / 기타 목록 */
+.select > :nth-child(2) {
     display: flex;
-    justify-content: end;
-}
-.select :nth-child(6){
-    display: flex;
+    flex-basis: 50%;
 }
 
-.select :nth-child(5) i,
-.select :nth-child(6) i {
-    font-size: 25px;
+/* selectRight : 공백 */
+.selectRight > :nth-child(1){
+    flex-basis: 10%;
+}
+/* selectRight : 좋아요 / 싫어요, 공유 버튼 */
+.selectRight > :nth-child(2){
+    display: flex;
+    align-items: center;
+    flex-basis: 75%;
+}
+/* selectRight : 기타 버튼 */
+.selectRight > :nth-child(3){
+    flex-basis: 10%;
 }
 
-.select :nth-child(5) pre {
-    font-size: 18px;
+/* 좋아요 버튼 영역 */
+.selectRight > :nth-child(2) > :nth-child(1){
+    display: flex;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 35%;
+    border-start-start-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    
+}
+
+/* 썸업 / 썸다운 이미지 크기 조절 */
+#thumbUp,
+#thumbDown {
+    font-size: 23px;
+}
+
+/* 좋아요 수 폰트 사이즈 */
+.select :nth-child(2) pre {
+    font-size: 15px;
+}
+/* 버튼 안에 이미지와 폰트 여백 제거로 정렬 */
+.select :nth-child(2) i {
+    margin: 7px;
+}
+/* 싫어요 버튼 */
+.select > :nth-child(3) {
+    display: flex;
+    align-items: center;
+    border: none;
+    height: 40px;
+    width: 100%;
+
+    border-start-end-radius: 20px;
+    border-end-end-radius: 20px;
+    border-left: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.select > :nth-child(3) {
+    display: flex;
+    margin: ;
 }
