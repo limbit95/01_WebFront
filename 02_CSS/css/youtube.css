@@ -209,40 +209,81 @@ fieldset {
 
 }
 
-.select :nth-child(1){flex-basis: 5%;}
-.select :nth-child(2){
-    flex-basis: 20%;
+.select :nth-child(1){flex-basis: 5%;} 
+.select :nth-child(2){flex-basis: 20%;}
+.select :nth-child(3){flex-basis: 20%;}
+.select :nth-child(4){flex-basis: 10%;}
+.select :nth-child(5){flex-basis: 10%;}
+.select :nth-child(6){flex-basis: 10%;}
+.select :nth-child(7){flex-basis: 20%;}
+.select :nth-child(8){flex-basis: 5%;}
+
+/* 채널명, 구독자수 */
+.select :nth-child(2) {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0;
 }
-.select :nth-of-type(3){
-    flex-basis: 30%;
-    display: flex;
-    justify-content: center;
-}
-
-.bell-btn {
-    display: flex;
-}
-.bell-btn img {
-    width: 40px;
-    height: 40px;
-}
-
-.select :nth-child(4){flex-basis: 20%;}
-.select :nth-child(5){flex-basis: 20%;}
-.select :nth-child(6){flex-basis: 5%;}
-
 .select :nth-child(2) > a {
     text-decoration: none;
     font-size: 20px;
     color: black;
 }
-
 .select :nth-child(2) > p {
     font-size: 13px;
     text-align: start;
     margin-left: 8px;
+}
+
+
+/* 구독중 버튼 */
+.select :nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.bell-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+    border: 10px solid transparent;
+    border-radius: 50px;
+}
+.bell-btn :nth-child(1) , 
+.bell-btn :nth-child(3) {
+    flex-basis: 10%;
+    font-size: 25px;
+    background-color: transparent;
+}
+.bell-btn :nth-child(2) {
+    flex-basis: 80%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.bell-btn pre {
+    font-size: 18px;
+}
+
+/* 좋아요 / 싫어요 */
+.select :nth-child(5){
+    display: flex;
+    justify-content: end;
+}
+.select :nth-child(6){
+    display: flex;
+}
+
+.select :nth-child(5) i,
+.select :nth-child(6) i {
+    font-size: 25px;
+}
+
+.select :nth-child(5) pre {
+    font-size: 18px;
 }
