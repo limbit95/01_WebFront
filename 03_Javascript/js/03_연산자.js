@@ -49,6 +49,8 @@ function minusFn() {
     const value2 = number2.value;
 
     result.innerText = Number(value1) - Number (value2);
+    // 위에 value1, value2 함수 없애고 아래와 같은 코드로도 기능 수행 가능
+    // result.innerText = Number(number1.value) - Number (number2.value);
 }
 
 function multiFn() {
