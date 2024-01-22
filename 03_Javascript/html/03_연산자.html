@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_연산자</title>
+
+    <link rel="stylesheet" href="/03_Javascript/css/03_연산자.css">
+</head>
+<body>
+    
+    <h1>연산자(Operator)</h1>
+
+    <h3>산술 연산자 (계산기 만들기)</h3>
+    <pre>
+        +, -, *, /, %(modulo or mod)
+    </pre>
+
+    <div class="calculator">
+        <div class="row">
+            <label for="input1">첫 번째 값 : </label>
+            <input type="number" id="input1">
+        </div>
+    
+    
+        <div class="row">
+            <label for="input2">두 번째 값 : </label>
+            <input type="number" id="input2">
+        </div>
+    
+        <div class="row btn-row">
+            <!-- 버튼 클릭 시 plusFn() 함수 호출(실행) -->
+            <button onclick="plusFn()">+</button>
+    
+            <button onclick="minusFn()">-</button>
+         
+            <button onclick="multiFn()">*</button>
+        
+            <button onclick="divFn()">/</button>
+        
+            <button onclick="modFn()">%</button>
+        </div>
+    
+        <div class="row">
+            <h2>결과 : <span id="calcResult">100</span>  </h2>
+        </div>
+    </div>
+    
+    <h3>내가 이해한 HTML과 JS와의 상호작용</h3>
+    <pre>
+        HTML의 input 값을 넘겨받아 변수에 저장하는 코드
+        1. 첫 번째 값의 칸에서 입력받은 숫자를 담는 변수
+            const number1 = document.getElementById("input1");
+        2. 두 번째 값의 칸에서 입력받은 숫자를 담는 변수
+            const number2 = document.getElementById("input2");
+        3. 결과값을 담는 변수
+            const result = document.getElementById("calcResult");
+        
+        HTML에서 만든 버튼의 onclick-"" 쌍따옴표 안에 있는 이름과 같은 이름의 함수를
+        JS 파일에서 작성
+        ex)
+        function plusFn() {
+            input 값에서 넘겨 받은 숫자를 담은 전역 변수 number1의 value를 
+            함수 블록 안에서 새로운 변수에 담기
+            const value1 = number1.value; 
+            const value2 = number2.value;
+        
+            결과값을 담아 html에 넘겨주는 innerText를 사용하여 결과값 출력
+            span 태그의 id="calcResult" <-> const result = document.getElementById("calcResult");
+            const result <-> result.innerText = Number(value1) - Number (value2);
+            result.innerText = Number(value1) - Number (value2);
+        }
+    </pre>
+
+    <hr>
+
+    <h3>증감 / 감소 연산자(++, --)</h3>
+    <pre>
+        - 1씩 값을 증가 / 감소 시키는 연산자
+        - 합쳐서 "증감 연산자" 라고 부르기도 함
+
+        * 전위 연산 (제일 먼저 1 증가 / 감소 시키기) : ++변수명, --변수명
+        * 후위 연산 (제일 나중에 1 증가 / 감소 시키기) : 변수명++, 변수명--
+    </pre>
+
+    <div>
+        <button onclick="decrease()">1 감소</button>
+        <span id="result2">0</span>
+        <button onclick="increase()">1 증가</button>
+    </div>
+
+    <hr>
+
+    <h3>전위, 후위 연산 확인하기</h3>
+    <button onclick="check()">확인하기</button>
+
+
+    <script src="/03_Javascript/js/03_연산자.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_JS 개요</title>
+</head>
+<body>
+
+    <h1>Script 언어란?</h1>
+    <pre>
+        기본 프로그램의 동작을 사용자의 요구에 맞게 수행되도록 해주는 용도의 언어
+
+        별도의 소스코드 컴파일(이진수로 번역)을 하지 않고,
+        Interpreter(인터프리터, 한 줄씩 코드를 읽어서 해석하는 기계, 기능)를 이용해서 코드를 바로 실행
+
+        - 장점 : 컴파일의 소요되는 시간이 없음
+        - 단점 : 프로그램 실행 시간이 상대적으로 느림
+    </pre>
+
+    <hr>
+
+    <h1>Javascript 란?</h1>
+    <pre>
+        웹 브라우저(크롬, 엣지, 웨일, 파이어폭스 등)에서
+        주로 사용하는 인터프리터 방식의 객체 지향 프로그래밍 언어.
+
+        객체 지향 프로그래밍 언어 : 객체(Object)를 만들고 조작하며, 객체끼리 
+        관계를 맺음으로서 다수의 객체가 함께 명령을 수행하는 것.
+    </pre>
+
+    <hr>
+
+    <h1>Javascript 코드 작성 방법</h1>
+
+    <ol>
+        <li>
+            브라우저 개발자 도구 : Console에 직접 작성(크롬 개발자 도구(F12) 켜고 콘솔 창에서 직접 작성한다
+        </li>
+
+        <li>
+            HTML 내부에 script 태그를 이용해서 작성 (Internal) 작성
+            <br>
+            
+            <!-- type : submit 서버로 제출하는 기능 / button : 단순한 버튼 클릭으로 인한 동작 수행 기능 -->
+            <!-- onclick : 버튼 클릭시 "쌍따옴표 안에 있는 기능을 수행함" -->
+            <button type="button" onclick="internalFn()">Internal 방식 확인</button>
+
+            <!-- internalFn() : HTML 기준 script 태그 안에 internalFn() 이라는 이름의 함수를 만든다. -->
+            <script>
+                // Js 한 줄 주석
+                /* 범위 주석 */ 
+                // script 태그 : JS 코드를 작성할 수 있는 태그
+                function internalFn() {
+                    // alert() : 경고, 알리다 (JS : 알림창이나 대화상자를 의미)
+                    alert("Internal 버튼이 클릭 되었습니다.");
+                }
+            </script>
+        </li>
+
+        <li>
+            HTML 외부에 존재하는 .js 파일을 연결해서 사용하는 방법(External 방식)
+            <br>
+            <button type="button" onclick="externalFn()">Enternal 방식 확인</button>
+        </li>
+
+        <li>
+            태그에 직접 JS 코드를 작성 (inline 방식, 권장 X : 코드가 지저분해짐) 
+            <br>
+            <button type="button" onclick="alert('inline 버튼 클릭됨')">inline 방식 확인</button>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h1>JS 맛보기</h1>
+    <button type="button" onclick="lightMode()">라이트 모드</button>
+    <button type="button" onclick="darkMode()">다크 모드</button>
+
+    <hr>
+
+    <h1></h1>
+
+
+
+
+
+
+
+    <div style="height: 500px; background-color: white;"></div>
+
+    <!-- HTML과 JS 파일 연결하는 코드 -->
+    <script src="/03_Javascript/js/01_JS개요.js"></script>
+</body>
+</html>

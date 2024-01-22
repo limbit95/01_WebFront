@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .container {
@@ -61,7 +61,7 @@ nav > ul > li {
     /* 해당 영역의 백그라운드에 이미지 넣기 */
     background-image: url(/images/해리2.jpg);
     width: 100vw;
-    height: 800px;
+    height: 900px;
     /* 사진이 갖고 있는 고유 사이즈로 인해 웹사이트에 비어있는 부분에 사진이 계속해서
     반복되어 깔리는 것을 없애는 명령어 */
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@ nav > ul > li {
 
 .title-box {
     /* border: 1px solid red; */
-    height: 300px;
+    height: 400px;
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,6 @@ nav > ul > li {
 .title-box > p {
     font-size: 20px;
     margin-top: 20px;
-    -webkit-text-stroke: 1px black;
     color: white;
 }
 
