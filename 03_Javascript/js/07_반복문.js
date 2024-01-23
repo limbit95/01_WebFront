@@ -99,3 +99,19 @@ function executeFn2() {
 
 // 요소.innerHTML = `<li>${num}</li>`;
 // -> HTML 태그를 해석해서 화면에 태그의 본 기능대로 출력
+
+
+// 구구단
+
+function executeFn3() {
+    const input3 = Number(document.getElementById("input3").value);
+
+    const ul = document.getElementById("result3");
+
+    ul.innerHTML = "";
+
+    for(let num = 1; num <= 9; num++) {
+        ul.innerHTML += `<li>${input3} * ${num} = ${input3 * num}</li>`;
+    }
+    
+}
