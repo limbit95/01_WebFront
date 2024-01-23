@@ -117,31 +117,31 @@ function check() {
     // -> 다른 연산보다 먼저 수행
     // -> cnt 값이 먼저 증가, 감소된 후 console에 출력
 
-    console.log("++cnt :", ++cnt)
-    console.log("++cnt :", ++cnt)
-    console.log("--cnt :", --cnt)
+    console.log("++cnt :", ++cnt);
+    console.log("++cnt :", ++cnt);
+    console.log("--cnt :", --cnt);
 
     // 후위 연산(cnt++, cnt--) 확인
     // -> 다른 연산이 다 끝나고 마지막에 수행
 
     cnt = 50;
 
-    console.log("cnt++ :", cnt++) // 50
-    console.log("후위 연산 후 cnt :", cnt) // 51
-    console.log("cnt++ :", cnt++) // 51
-    console.log("후위 연산 후 cnt :", cnt) // 52
-    console.log("cnt-- :", cnt--) // 52
-    console.log("후위 연산 후 cnt :", cnt) // 51
+    console.log("cnt++ :", cnt++); // 50
+    console.log("후위 연산 후 cnt :", cnt); // 51
+    console.log("cnt++ :", cnt++); // 51
+    console.log("후위 연산 후 cnt :", cnt); // 52
+    console.log("cnt-- :", cnt--); // 52
+    console.log("후위 연산 후 cnt :", cnt); // 51
 
     let a = 10;
     let b = 5;
     let c = ++a * b--;
 
     // a = 11
-    // b = 4;
-    // c = 55;
+    // b = 4
+    // c = 55
 
-    console.log("a :", a)
-    console.log("b :", b)
-    console.log("c :", c)
+    console.log("a :", a);
+    console.log("b :", b);
+    console.log("c :", c);
 }
