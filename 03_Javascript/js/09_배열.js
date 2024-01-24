@@ -162,21 +162,23 @@ function check6() {
     let cnt = 2;
 
     // 강사님 코드
-    // const arr = [];
+    const arr = [];
 
-    // for(let i = 0; i < 5; i++){
+    for(let i = 0; i < 5; i++){
 
-    //     arr[i] = [];
+        arr[i] = [];
 
-    //     for(let x = 0; x < 5; x++){
-    //         arr[i][x] = cnt;
-    //         cnt += 2;
-    //     }
-    // }
+        for(let x = 0; x < 5; x++){
+            arr[i][x] = cnt;
+            cnt += 2;
+        }
+    }
 
-    // console.log(arr);
+    console.log(arr);
     
-    const arr2 = new Array(5)(5);
+
+    // // Javascript에선 아래와 같은 방식 지원 안 됨
+    // const arr2 = new Array(5)(5);
 
     // for(let i = 0; i < arr2.length; i++){
     //     for(let x = 0; x < arr2[i].length; x++){
