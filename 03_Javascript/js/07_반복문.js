@@ -110,8 +110,121 @@ function executeFn3() {
 
     ul.innerHTML = "";
 
+    // 강사님 코드 추가
+    if(input3 < 2 || input3 > 9) {
+        alert("2~9 사이만 입력해 주세요")
+        return;
+    }
+
     for(let num = 1; num <= 9; num++) {
-        ul.innerHTML += `<li>${input3} * ${num} = ${input3 * num}</li>`;
+        ul.innerHTML += `<li>${input3} x ${num} = ${input3 * num}</li>`;
     }
     
+}
+
+// -------------------------------------------------------
+
+// 중첩 반복문(2중 for문)
+
+function check8() {
+    for(let num1 = 1; num1 <= 4; num1++) {
+        let str = "";
+
+        for(let num2 = 1; num2 <= 5; num2++) {
+            str += num2;
+        }
+        console.log(str);
+    }
+}
+
+function check9() {
+    for(let x = 1; x <= 5; x++) {
+        let str = "";
+
+        for(let y = 1; y <= x; y++) {
+            str += y;
+        }
+        console.log(str);
+    }
+}
+
+// while문
+
+function check16() {
+
+    let val;
+
+    while(val !== null) {
+        //동일 비교 연산자
+        // !== : 값, 자료형이 모두 다른 경우 true
+        // === : 값, 자료형이 모두 같은 경우 true
+
+        val = prompt("입력 후 확인"); // 변수에 prompt 값 대입
+        // 확인 -> 입력한 값
+        // 취소 -> null
+
+        console.log(val);
+
+        // 아무것도 입력하지 않은 상태에서 확인을 눌러도 반복문의
+        // 조건식인 val !== null 에 해당하는 이유는
+        // 결국 빈 공백도 string 형태로 들어감으로 val 에 값은 없으나
+        // 자료형이 string으로 val !== null의 조건에 부합으로
+        // 계속 반복문이 수행되는 것이다
+    }
+}
+
+// 메뉴 주문하기
+
+function check17() {
+    
+    // 메뉴 가격
+    const gimbap = 3000;
+    const ramen = 3500;
+    const donkkaseu = 5000;
+
+    // 주문 개수 카운트
+    let gCnt = 0; // 김밥
+    let rCnt = 0; // 라면
+    let dCnt = 0; // 돈가스
+
+    // prompt로 입력한 값을 저장할 변수 선언
+    let input;
+
+    while(input !== null) {
+        input = prompt("메뉴 번호를 입력하세요");
+
+        switch(input) {
+            case "1" : gCnt++; break;
+            case "2" : rCnt++; break;
+            case "3" : dCnt++; break;
+            case null : alert("주문 완료!"); break;
+            default : alert("메뉴에 작성된 번호만 입력해주세요")
+        }
+    }
+    
+    alert(`김밥 : ${gCnt}, 라면 : ${rCnt}, 돈가스 : ${dCnt}`)
+    let sum = (gimbap * gCnt) + (ramen * rCnt) + (donkkaseu * dCnt);
+    alert(`총 가격 : ${sum} 원`)
+
+}
+
+// while 문을 for문처럼 사용하기
+
+function check18() {
+
+    let num1 = 1;
+
+    while(num1 < 11) {
+        console.log(num1);
+        num1++;
+    }
+
+    console.log("---------------");
+
+    let num2 = 10;
+
+    while(num2 > 0) {
+        console.log(num2);
+        num2--;
+    }
 }
