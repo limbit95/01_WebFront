@@ -71,3 +71,4 @@ document.addEventListener
 
     bomberman.style.transform = `translate3d(${xindex}px, ${yindex}px, 0)`;
 });
+
