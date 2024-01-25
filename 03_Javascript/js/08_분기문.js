@@ -86,22 +86,20 @@ function startGame() {
 
     console.log(random);
 
-    while(input != random) {
-        input = prompt("1~100 사이 숫자를 입력하세요")
+    input = prompt("1~100 사이 숫자를 입력하세요")
 
+    while(input != random) {
         if(input === null){
             break;
-        }
-
-        if(input > random){
+        } else if(input > random){
             input = prompt("1~100 사이 숫자를 입력하세요 / DOWN")
             // alert("DOWN");
         } else if (input < random){
             input = prompt("1~100 사이 숫자를 입력하세요 / UP")
             // alert("UP");
-        } else {
-            alert("정답입니다!")
-        }
-        
+        } 
+    }
+    if (Number(input) == random) {
+        alert("정답입니다");
     }
 }

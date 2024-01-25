@@ -9,7 +9,7 @@ function classTest(){
     // .cls-test 요소 모두 얻어오기
     // -. HTMLCollection ( == 유사 배열)
     const divs = document.getElementsByClassName("cls-test");
-
+    
     console.log(divs);
 
     // divs 0, 1, 2 번째 요소에 접근하여 배경색 변경
