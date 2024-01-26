@@ -78,14 +78,14 @@ add1.addEventListener("click", () => {
     
     star.addEventListener("click", () => {
 
-        star.setAttribute("class", "fa-solid fa-star");
-
-        if(star.className == "fa-solid fa-star") {
-            star.addEventListener("click", () => {
-                star.setAttribute("class", "fa-regular fa-star");
-                
-            });
+        if(star.className == "fa-regular fa-star"){
+            star.setAttribute("class", "fa-solid fa-star");
+            createh4.style.color = "red";
+        } else {
+            star.setAttribute("class", "fa-regular fa-star");
+            createh4.style.color = "black";
         }
+        
 
     });
     
