@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 700px;
+}
+
+/* 왼쪽 파트 */
+.left {
+    flex-basis: 55%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.phone-body {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+/* 번호 입력창 */
+#input-number {
+    flex-basis: 8%;
+    text-align: center;
+    font-size: 35px;
+    border-bottom: 2px solid rgb(171, 217, 235);
+}
+
+/* 번호 버튼을 담는 div */
+.numbtn-body {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numbtn-list {
+    width: 97%;
+    height: 97%;
+}
+
+/* 각각의 번호 버튼들 */
+.numbtn-body > div > button {
+    cursor: pointer;
+    width: 150px;
+    height: 110px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 3px 0px;
+    margin-left: 6px;
+
+    /* 디자인 */
+    border: none;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+/* 버튼에 마우스 오버시 변화 */
+.numbtn-body > div > button:hover {
+    background-color: aliceblue;
+}
+
+/* 추가, 초기화 버튼 담은 div */
+.btn-list{
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* 각각의 추가, 초기화 */
+.btn-list > button {
+    cursor: pointer;
+    height: 40%;
+    width: 80%;
+    font-size: 20px;
+
+    /* 디자인 */
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* 추가 버튼 디자인 */
+.btn-list > button:first-child {
+    border: 3px solid green;
+    color: green;
+}
+
+/* 초기화 버튼 디자인 */
+.btn-list > button:last-child {
+    border: 3px solid rebeccapurple;
+    color: rebeccapurple;
+}
+
+
+/* 오른쪽 파트 */
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 11%;
+    overflow: hidden;
+    border-left: 3px solid rgb(199, 195, 195);
+}
+
+/* 전화 번호 목록 */
+h3 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 번호 목록 div */
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+}
+
+/* 번호가 담길 상자 */
+.user-list > div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    height: 30px;
+    margin-top: 5px;
+}
+
+/* 별 버튼 */
+#star {
+    margin-left: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.remove {
+    cursor: pointer;
+    margin-left: 10px;
+}
+

@@ -53,3 +53,4 @@ innerHTMLbox.addEventListener("click", () => {
     += "<div class='box'><input type='text'></div>";
 
 });
+
