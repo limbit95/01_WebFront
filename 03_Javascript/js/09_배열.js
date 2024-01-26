@@ -175,6 +175,8 @@ function check6() {
     }
 
     console.log(arr);
+
+    
     
 
     // // Javascript에선 아래와 같은 방식 지원 안 됨
@@ -189,6 +191,6 @@ function check6() {
 
 
     
-    console.log(arr2);
+    // console.log(arr2);
 }
 

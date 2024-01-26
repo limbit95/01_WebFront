@@ -93,7 +93,7 @@ function cssTest() {
     // 두 번째 자식 div 접근
     const div2 = document.querySelector(['[target-div="css-div"] div:last-child']);
     div2.innerText = "첫 번째 요소가 아니면 querySelector() 특징 활용 못함";
-
+    
 
 
     // 모든 자식 div 한 번에 선택(배열)
