@@ -7,34 +7,79 @@
 
 main {
     display: flex;
-    width: 100vw;
+    width: 1000px;
     height: 700px;
 }
 
 /* 왼쪽 파트 */
 .left {
-    flex-basis: 55%;
+    /* flex-basis: 60%; */
+    width: 1000px;
+    height: 700px;
     display: flex;
     justify-content: end;
     align-items: center;
     overflow: hidden;
 }
 
+/* 왼쪽 파트 기능을 담는 영역 */
 .phone-body {
     height: 100%;
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 40px;
+    
+}
+
+/* 헤드 넘버와 번호 내용을 담는 영역 */
+.phone-body > :first-child {
+    height: 60px;
+    width: 480px;
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 010과 같은 헤드 넘버 선택창 */
+#head-number {
+    flex-basis: 20%;
+    font-size: 25px;
+    text-align: center;
+    height: 50px;
+    border: 1px solid rgb(119, 155, 187);
+    border-radius: 10px;
+}
+
+/* 번호 입력창 담는 div : 이름 귀찮아서 아무거나 지음 */
+.a {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 /* 번호 입력창 */
 #input-number {
-    flex-basis: 8%;
+    width: 200px;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
+    margin: 0px 25px;
+
+    border: none;
     border-bottom: 2px solid rgb(171, 217, 235);
+}
+
+/* 삭제 버튼 */
+#delete-btn {
+    font-size: 30px;
+    color: rgb(143, 208, 228);
+    cursor: pointer;
+}
+#delete-btn:hover {
+    color: rgb(84, 180, 212);
 }
 
 /* 번호 버튼을 담는 div */
@@ -111,7 +156,7 @@ main {
 .right {
     display: flex;
     flex-direction: column;
-    width: 11%;
+    width: 380px;
     overflow: hidden;
     border-left: 3px solid rgb(199, 195, 195);
 }
@@ -136,19 +181,27 @@ h3 {
     justify-content: end;
     align-items: center;
     width: 90%;
-    height: 30px;
+    height: 40px;
     margin-top: 5px;
+    border-bottom: 1px solid rgb(114, 152, 152);
 }
 
 /* 별 버튼 */
 #star {
     margin-left: 20px;
     margin-top: 5px;
+    font-size: 20px;
     cursor: pointer;
+    color: yellow;
 }
 
 .remove {
     cursor: pointer;
     margin-left: 10px;
+    font-size: 25px;
 }
 
+/* 저장된 번호 목록의 번호 폰트 */
+h4 {
+    font-size: 20px;
+}   
