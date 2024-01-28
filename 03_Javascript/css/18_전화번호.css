@@ -67,6 +67,7 @@ main {
     text-align: center;
     font-size: 30px;
     margin: 0px 25px;
+    letter-spacing: 2px;
 
     border: none;
     border-bottom: 2px solid rgb(171, 217, 235);
@@ -152,6 +153,9 @@ main {
 }
 
 
+/* ------------------------------------------------------- */
+
+
 /* 오른쪽 파트 */
 .right {
     display: flex;
@@ -180,24 +184,33 @@ h3 {
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 90%;
+    width: 95%;
     height: 40px;
     margin-top: 5px;
     border-bottom: 1px solid rgb(114, 152, 152);
 }
 
+/* 수정 버튼 */
+#edit {
+    margin-left: 25px;
+    margin-top: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /* 별 버튼 */
 #star {
-    margin-left: 20px;
+    margin-left: 5px;
     margin-top: 5px;
     font-size: 20px;
     cursor: pointer;
     color: yellow;
 }
 
+/* 번호 삭제 버튼 */
 .remove {
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 5px;
     font-size: 25px;
 }
 

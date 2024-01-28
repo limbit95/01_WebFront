@@ -53,12 +53,11 @@ clear1.addEventListener("click", () => {
 
 // 추가 버튼 요소 얻어오기
 const add1 = document.querySelector(".add");
-
 // 번호 리스트 영역 요소 얻어오기
 const list1 = document.querySelector(".user-list");
-
 // 헤드 넘버 요소 얻어오기
 const headNum = document.querySelector("#head-number");
+// 저장된 번호 수정 버튼 요소
 
 add1.addEventListener("click", () => {
 
@@ -67,6 +66,7 @@ add1.addEventListener("click", () => {
     //     <h4>01012345678</h4>
     //     <i id="star" class="fa-regular fa-star"></i>
     //     <span class="remove">&times;</span>
+    //     <i id="edit" class="fa-regular fa-pen-to-square"></i>
     // </div>
 
     // 010 과 같은 앞 번호 세 자리 체크박스에서
@@ -95,15 +95,19 @@ add1.addEventListener("click", () => {
         const createSpan = document.createElement("span");
         createSpan.classList.add("remove");
         createSpan.innerHTML = "&times;";
+
+        const createedit = document.createElement("i");
+        createedit.setAttribute("id", "edit");
+        createedit.setAttribute("class", "fa-regular fa-pen-to-square")
         
         // 순서대로 -> div -> 번호 -> 별 -> x
         list1.append(createDiv);
         createDiv.append(createh4);
+        createDiv.append(createedit);
         createDiv.append(star);
         createDiv.append(createSpan);
 
         input1.value = "";
-
 
 
         // 저장된 번호 삭제
@@ -115,8 +119,20 @@ add1.addEventListener("click", () => {
 
         });
 
-        // 별 버튼 클릭 시 변화
-        star.addEventListener("click", () => {
+        // 수정 버튼의 부모인 div의 "addNumber" 클래스 배열의 
+        // 해당 인덱스의 부모 안의 번호만 수정하게끔 만들기
+        createedit.addEventListener("click", (e) => {
+
+            const changeNumber = prompt("수정할 번호를 입력해주세요");
+
+
+
+        });
+
+    }
+
+    // 별 버튼 클릭 시 변화
+    star.addEventListener("click", () => {
 
         if(star.className == "fa-regular fa-star"){
             star.setAttribute("class", "fa-solid fa-star");
@@ -125,8 +141,6 @@ add1.addEventListener("click", () => {
             star.setAttribute("class", "fa-regular fa-star");
             createh4.style.color = "black";
         }
-        });
-
-    }
+    });
 
 });
