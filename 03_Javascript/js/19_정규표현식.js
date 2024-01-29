@@ -146,7 +146,9 @@ document.querySelector("#inputPno").addEventListener("keyup", (e) => {
 
 // 회원 가입 양식
 
-document.querySelector("#inputId").addEventListener("keyup", (e) => {
+// 아이디
+const inputId = document.querySelector("#inputId");
+inputId.addEventListener("keyup", (e) => {
 
     const regExp = /^[a-z, A-Z, \-, \_, 0-9]{6,13}$/;
 
@@ -156,34 +158,135 @@ document.querySelector("#inputId").addEventListener("keyup", (e) => {
 
     if(regExp.test(e.target.value)){
         e.target.style.backgroundColor = "springgreen";
+        inputId.setAttribute("boolean", "true");
     } else {
         e.target.style.backgroundColor = "white";
+        inputId.setAttribute("boolean", "false");
     }
-
 });
 
+// 비밀번호 입력
 const inputpw = document.querySelector("#inputPw");
 const inputpw2 = document.querySelector("#inputPw2");
+const samePw = document.querySelector("#samePw");
 
-inputpw.addEventListener("keyup", (e) => {
+inputpw.addEventListener("keyup", () => {
 
     if (inputpw.value.length == 0){
-        same.innerText = "비밀번호를 입력해주세요";
-    }
+        samePw.innerText = "";
+    } 
 
 });
 
-inputpw2.addEventListener("keyup", (e) => {
+// 비밀번호 일치 확인
+inputpw2.addEventListener("keyup", () => {
 
     if (inputpw.value.length == 0){
         alert("비밀번호를 입력해주세요");
-        inputpw2.innerHTML = "";
+        inputpw2.value = "";
+    } else if (inputpw2.value.length == 0){
+        samePw.innerHTML = "";
+    } else if (inputpw.value == inputpw2.value){
+        samePw.innerText = "비밀번호 일치";
+        samePw.classList.remove("error");
+        samePw.classList.add("confirm");
+        inputpw2.setAttribute("boolean", "true");
+    } else {
+        samePw.innerText = "비밀번호 불일치";
+        samePw.classList.remove("confirm");
+        samePw.classList.add("error");
+        inputpw2.setAttribute("boolean", "false");
     }
 
-    if (inputpw.value == inputpw2.value){
-        same.innerText = "비밀번호 일치";
+
+});
+
+// 이름
+const inputName1 = document.querySelector("#inputName1");
+const sameName = document.querySelector("#sameName");
+
+inputName1.addEventListener("keyup", () => {
+
+    const regExp = /^[ㄱ-힣]{2,5}$/;
+    if(inputName1.value.length == 0){
+        sameName.innerHTML = "";
+    } else if(regExp.test(inputName1.value)){
+        sameName.innerHTML = "정상입력"
+        sameName.classList.remove("error");
+        sameName.classList.add("confirm");
+        inputName1.setAttribute("boolean", "true");
     } else {
-        same.innerText = "비밀번호 불일치";
+        sameName.innerHTML = "한글만 입력하세요"
+        sameName.classList.remove("confirm");
+        sameName.classList.add("error");
+        inputName1.setAttribute("boolean", "false");
+    }
+
+});
+
+// 성별 : 미선택시 선택해달라는 경고창 팝업
+
+const gender = document.querySelectorAll(".checkBox");
+
+// if(!gender[0].checked && !gender[1].checked){
+//     alert("성별을 선택해주세요")
+// } 
+
+// 전화번호
+const inputNum = document.querySelector("#inputNum");
+
+inputNum.addEventListener("keyup", () => {
+
+    const regExp = /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}$/;
+
+    if(regExp.test(inputNum.value)){
+        inputNum.setAttribute("boolean", "true");
+    } else {
+        inputNum.setAttribute("boolean", "false");
+    }
+});
+
+// 이메일 
+const inputEmail = document.querySelector("#inputEmail");
+
+function clear(){
+    inputId.value = "";
+    inputId.style.backgroundColor = "white";
+    inputId.setAttribute("boolean", "false");
+    inputpw.value = "";
+    inputpw2.value = "";
+    inputpw2.setAttribute("boolean", "false");
+    samePw.innerHTML = "";
+    inputName1.value = "";
+    inputName1.setAttribute("boolean", "false");
+    gender[0].checked = false;
+    gender[1].checked = false;
+    sameName.innerHTML = "";
+    inputNum.value = "";
+    inputNum.setAttribute("boolean", "false");
+    inputEmail.value = "";
+}
+
+// 초기화 버튼 요소 
+const reset1 = document.querySelector("#reset"); 
+// 초기화
+reset1.addEventListener("click", () => {
+
+    clear();
+
+});
+
+// 회원가입
+const createUser = document.querySelector("#createUser");
+createUser.addEventListener("click", () => {
+
+    if(inputId.boolean == false || inputpw2.boolean == false ||
+        inputName1.boolean == false || !gender[0].checked || 
+        gender[1].checked || inputNum.boolean == false) {
+            alert("회원가입 실패");
+    } else {
+        alert("회원가입 완료");
+        clear();
     }
 
 });

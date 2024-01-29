@@ -21,9 +21,6 @@
             font-weight: bold;
         }
 
-        fieldset > * {
-            border: 1px solid red;
-        }
 
 
     </style>
@@ -132,51 +129,54 @@
         
         <table>
 
-            <tbody>
+            <tbody id="body">
 
                 <tr>
                     <td>아이디</td>
-                    <td><input id="inputId" type="text"></td>
-                    <td>중복확인</td>
+                    <td><input id="inputId" type="text" boolean="false"></td>
+                    <td><button>중복확인</button></td>
                 </tr>
 
                 <tr>
                     <td>비밀번호</td>
-                    <td><input id="inputPw" type="password"></td>
-                    <td><span id="same"></span></td>
+                    <td><input id="inputPw" type="password" boolean="false"></td>
+                    <td><span id="samePw"></span></td>
                 </tr>
 
                 <tr>
                     <td>비밀번호 확인</td>
-                    <td><input id="inputPw2" type="password"></td>
+                    <td id="a"><input id="inputPw2" type="password" boolean="false"></td>
                 </tr>
 
                 <tr>
                     <td>이름</td>
-                    <td><input id="inputName1" type="name"></td>
+                    <td><input id="inputName1" type="name" boolean="false"></td>
+                    <td><span id="sameName"></span></td>
                 </tr>
 
                 <tr>
                     <td>성별</td>
-                    <td>남<input name="a" type="radio"></td>
-                    <td>여<input name="a" type="radio"></td>
+                    <td>
+                        남<input name="a" type="radio" class="checkBox">
+                        여<input name="a" type="radio" class="checkBox">
+                    </td>
                 </tr>
 
                 <tr>
                     <td>전화번호</td>
-                    <td><input id="inputNum" type="number"></td>
+                    <td><input id="inputNum" type="tel" boolean="false"></td>
                 </tr>
 
                 <tr>
                     <td>이메일</td>
-                    <td><input id="inputEmail" type="email"></td>
+                    <td><input id="inputEmail" type="email" boolean="false"></td>
                 </tr>
 
             </tbody>
 
         </table>
 
-        <tr>
+        <tr id="btn-list1">
             <button id="reset">초기화</button>
             <button id="createUser">회원가입</button>
         </tr>
