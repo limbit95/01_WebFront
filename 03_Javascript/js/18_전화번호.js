@@ -118,29 +118,35 @@ add1.addEventListener("click", () => {
             parent.remove();
 
         });
+        
 
         // 수정 버튼의 부모인 div의 "addNumber" 클래스 배열의 
         // 해당 인덱스의 부모 안의 번호만 수정하게끔 만들기
         createedit.addEventListener("click", (e) => {
 
-            const changeNumber = prompt("수정할 번호를 입력해주세요");
+            const editNumber = document.querySelector(".addNumber");
+
+            const changeNumber = Number(prompt("-제외한 수정할 번호를 입력해주세요"));
+
+            createh4.innerText = `010-${changeNumber};
+
+        });
 
 
+        // 별 버튼 클릭 시 변화
+        star.addEventListener("click", () => {
 
+            if(star.className == "fa-regular fa-star"){
+                star.setAttribute("class", "fa-solid fa-star");
+                createh4.style.color = "red";
+            } else {
+                star.setAttribute("class", "fa-regular fa-star");
+                createh4.style.color = "black";
+            }
         });
 
     }
 
-    // 별 버튼 클릭 시 변화
-    star.addEventListener("click", () => {
-
-        if(star.className == "fa-regular fa-star"){
-            star.setAttribute("class", "fa-solid fa-star");
-            createh4.style.color = "red";
-        } else {
-            star.setAttribute("class", "fa-regular fa-star");
-            createh4.style.color = "black";
-        }
-    });
+    
 
 });
