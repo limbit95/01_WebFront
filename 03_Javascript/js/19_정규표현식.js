@@ -190,11 +190,13 @@ inputpw2.addEventListener("keyup", () => {
         samePw.innerText = "비밀번호 일치";
         samePw.classList.remove("error");
         samePw.classList.add("confirm");
+        inputpw.setAttribute("boolean", "true");
         inputpw2.setAttribute("boolean", "true");
     } else {
         samePw.innerText = "비밀번호 불일치";
         samePw.classList.remove("confirm");
         samePw.classList.add("error");
+        inputpw.setAttribute("boolean", "false");
         inputpw2.setAttribute("boolean", "false");
     }
 
@@ -228,6 +230,12 @@ inputName1.addEventListener("keyup", () => {
 
 const gender = document.querySelectorAll(".checkBox");
 
+// if(gender[0].checked){
+//     gender[0].boolean = true;
+// } else {
+//     gender[0].boolean = false;
+// }
+
 // if(!gender[0].checked && !gender[1].checked){
 //     alert("성별을 선택해주세요")
 // } 
@@ -249,6 +257,7 @@ inputNum.addEventListener("keyup", () => {
 // 이메일 
 const inputEmail = document.querySelector("#inputEmail");
 
+// 모든 내용 초기화하는 함수
 function clear(){
     inputId.value = "";
     inputId.style.backgroundColor = "white";
@@ -276,17 +285,32 @@ reset1.addEventListener("click", () => {
 
 });
 
+document.querySelector("#test1").addEventListener("click", () => {
+    console.log(inputId);
+    console.log(inputpw);
+    console.log(inputpw2);
+    console.log(inputName1);
+    console.log(gender[0].checked);
+    console.log(gender[1]);
+    console.log(inputNum);
+});
+
+
 // 회원가입
 const createUser = document.querySelector("#createUser");
 createUser.addEventListener("click", () => {
 
-    if(inputId.boolean == false || inputpw2.boolean == false ||
-        inputName1.boolean == false || !gender[0].checked || 
-        gender[1].checked || inputNum.boolean == false) {
-            alert("회원가입 실패");
+    if(inputId.boolean == true && inputpw2.boolean == true &&
+        inputpw.boolean == true && inputName1.boolean == true && inputNum.boolean == true && 
+        gender[0].checked ||
+        inputId.boolean == true && inputpw2.boolean == true &&
+        inputpw.boolean == true && inputName1.boolean == true && inputNum.boolean == true && 
+        gender[1].checked) {
+            alert("회원가입 완료");
+            clear();
     } else {
-        alert("회원가입 완료");
-        clear();
+        alert("회원가입 실패");
+        
     }
 
 });
