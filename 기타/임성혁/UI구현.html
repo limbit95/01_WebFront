@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI구현</title>
+
+    <link rel="stylesheet" href="/UI구현.css">
+</head>
+<body>
+
+
+    <main>
+
+        <!-- 너비와 높이 -->
+        <div class="widthAndHeight">
+
+            <div>
+                <h4>너비 : </h4>
+                <input class="width" type="text">
+                <h5>px</h5>
+            </div>
+
+            <div>
+                <h4>높이 : </h4>
+                <input class="height" type="text">
+                <h5>px</h5>
+            </div>
+
+        </div>
+
+        <!-- 글자크기와 굵기 -->
+        <div class="sizeAndBold">
+
+            <div>
+                <h4>글자크기 : </h4>
+                <input class="font-size" type="text">
+                <h5>px</h5>
+            </div>
+
+            <div class="bold">
+                <h4>굵기 : </h4>
+                보통 <input name="a" type="radio" class="checkbox1" value="normal">
+                굵게 <input name="a" type="radio" class="checkbox1" value="bold">
+            </div>
+
+        </div>
+
+
+        <!-- 글자색과 배경색 -->
+        <div class="colorAndBackground">
+
+            <div>
+                <h4>글자색 : </h4>
+                <input class="color" type="text">
+            </div>
+
+            <div>
+                <h4>배경색 : </h4>
+                <input class="background-color" type="text">
+            </div>
+
+        </div>
+
+
+        <!-- 가로정렬 -->
+        <div class="row">
+
+            <h4>가로정렬 : </h4>
+
+            <div>
+                왼쪽 <input name="b" type="radio" class="checkbox2" value="start">
+                가운데 <input name="b" type="radio" class="checkbox2" value="center">
+                오른쪽 <input name="b" type="radio" class="checkbox2" value="end">
+            </div>
+
+        </div>
+
+
+        <!-- 세로정렬 -->
+        <div class="col">
+
+            <h4>세로정렬 : </h4>
+
+            <div>
+                위 <input name="c" type="radio" class="checkbox3" value="start">
+                가운데 <input name="c" type="radio" class="checkbox3" value="center">
+                아래 <input name="c" type="radio" class="checkbox3" value="end">
+            </div>
+
+        </div>
+
+
+        <!-- 출력 문자열 -->
+        <div class="print">
+            <h4>출력 문자열 : </h4>
+            <input class="printstr" type="text">
+        </div>
+
+        <div class="btn-list">
+            <button class="apply">적용하기</button>
+            <button tton class="clear">초기화</button>
+        </div>
+        
+
+        <!-- 출력 결과물 -->
+        <div class="result">
+
+        </div>
+
+    </main>
+    
+    
+    
+
+
+
+
+    <script src="/UI구현.js"></script>
+</body>
+</html>

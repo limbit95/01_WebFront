@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+main {
+    margin: 30px 30px;
+    width: 700px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > div {
+    width: 510px;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+}
+
+/* 모든 문자열 크기 통일 */
+h4 {
+    width: 50px;
+}
+
+/* 모든 인풋창 크기 통일 */
+input {
+    width: 120px;
+    height: 25px;
+}
+
+/* 체크박스들만 크기 조절 */
+.checkbox1 {
+    width: 30px;
+    height: 13px;
+}
+.checkbox2 {
+    width: 30px;
+    height: 13px;
+}
+.checkbox3 {
+    width: 30px;
+    height: 13px;
+}
+
+/* px 문자 */
+h5 {
+    width: 25px;
+}
+
+/* ---------------------------------------------------- */
+
+/* 세부 세팅 */
+
+/* 너비와 높이 div */
+.widthAndHeight > div{
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+
+
+
+/* 글자크기와 굵기 div */
+.sizeAndBold > div{
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+.sizeAndBold > div:first-child > h4 {
+    width: 90px;
+}
+
+
+
+/* 글자색과 배경색 div */
+.colorAndBackground > div{
+    display: flex;
+    align-items: center;
+    width: 240px;
+}
+.colorAndBackground > div > input {
+    width: 170px;
+}
+.colorAndBackground > div > h4 {
+    width: 70px;
+}
+
+
+
+/* 가로정렬 div */
+.row {
+    justify-content: start;
+}
+.row > * {
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+.row > h4{
+    width: 90px;
+}
+
+
+
+/* 세로정렬 div */
+.col {
+    justify-content: start;
+}
+.col > * {
+    display: flex;
+    align-items: center;
+    width: 250px;
+}
+.col > h4{
+    width: 90px;
+}
+
+
+
+/* 출력 문자열 div */
+.print {
+    justify-content: start;
+    align-items: center;
+}
+.print > div{
+    display: flex;
+    width: 250px;
+}
+.print > input {
+    width: 350px;
+}
+.print > h4{
+    width: 110px;
+}
+
+.btn-list {
+    display: flex;
+}
+
+/* 적용 버튼 */
+.apply {
+    margin: 10px 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+}
+.clear {
+    margin: 10px 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 40px;
+}
+
+
+/* 출력 결과물 */
+.result {
+    margin-top: 10px;
+    width: 500px;
+    height: 500px;
+}
+
+.createDiv {
+    border: 4px solid black;
+}
