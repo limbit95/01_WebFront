@@ -144,25 +144,39 @@ document.querySelector("#inputPno").addEventListener("keyup", (e) => {
 
 // ---------------------------------------------------------
 
+
+
 // 회원 가입 양식
+
+// 유효성 검사
+const checkObj = {
+    boolId : false,
+    boolPw : false,
+    boolName : false,
+    boolGender : false,
+    boolTel : false
+}
 
 // 아이디
 const inputId = document.querySelector("#inputId");
+
 inputId.addEventListener("keyup", (e) => {
 
     const regExp = /^[a-z, A-Z, \-, \_, 0-9]{6,13}$/;
 
     if(e.target.value.length == 0) {
         e.target.style.backgroundColor = "white";
+        checkObj[0] = false;
     }
 
     if(regExp.test(e.target.value)){
         e.target.style.backgroundColor = "springgreen";
-        inputId.setAttribute("boolean", "true");
+        checkObj[0] = true;
     } else {
         e.target.style.backgroundColor = "white";
-        inputId.setAttribute("boolean", "false");
+        checkObj[0] = false;
     }
+    
 });
 
 // 비밀번호 입력
@@ -186,18 +200,17 @@ inputpw2.addEventListener("keyup", () => {
         inputpw2.value = "";
     } else if (inputpw2.value.length == 0){
         samePw.innerHTML = "";
+        checkObj[1] = false;
     } else if (inputpw.value == inputpw2.value){
         samePw.innerText = "비밀번호 일치";
         samePw.classList.remove("error");
         samePw.classList.add("confirm");
-        inputpw.setAttribute("boolean", "true");
-        inputpw2.setAttribute("boolean", "true");
+        checkObj[1] = true;
     } else {
         samePw.innerText = "비밀번호 불일치";
         samePw.classList.remove("confirm");
         samePw.classList.add("error");
-        inputpw.setAttribute("boolean", "false");
-        inputpw2.setAttribute("boolean", "false");
+        checkObj[1] = false;
     }
 
 
@@ -212,16 +225,17 @@ inputName1.addEventListener("keyup", () => {
     const regExp = /^[ㄱ-힣]{2,5}$/;
     if(inputName1.value.length == 0){
         sameName.innerHTML = "";
+        checkObj[2] = false;
     } else if(regExp.test(inputName1.value)){
         sameName.innerHTML = "정상입력"
         sameName.classList.remove("error");
         sameName.classList.add("confirm");
-        inputName1.setAttribute("boolean", "true");
+        checkObj[2] = true;
     } else {
         sameName.innerHTML = "한글만 입력하세요"
         sameName.classList.remove("confirm");
         sameName.classList.add("error");
-        inputName1.setAttribute("boolean", "false");
+        checkObj[2] = false;
     }
 
 });
@@ -229,6 +243,15 @@ inputName1.addEventListener("keyup", () => {
 // 성별 : 미선택시 선택해달라는 경고창 팝업
 
 const gender = document.querySelectorAll(".checkBox");
+
+for(let i = 0; i < gender.length; i++){
+    gender[i].addEventListener("click", () => {
+
+        checkObj[3] = true;
+    
+    });
+}
+
 
 // if(gender[0].checked){
 //     gender[0].boolean = true;
@@ -247,10 +270,12 @@ inputNum.addEventListener("keyup", () => {
 
     const regExp = /^[0][0-9]{1,2}-[0-9]{3,4}-[0-9]{4}$/;
 
-    if(regExp.test(inputNum.value)){
-        inputNum.setAttribute("boolean", "true");
+    if(inputNum.value.length == 0){
+        checkObj[4] = false;
+    } else if(regExp.test(inputNum.value)){
+        checkObj[4] = true;
     } else {
-        inputNum.setAttribute("boolean", "false");
+        checkObj[4] = false;
     }
 });
 
@@ -262,17 +287,21 @@ function clear(){
     inputId.value = "";
     inputId.style.backgroundColor = "white";
     inputId.setAttribute("boolean", "false");
+    checkObj[0] = false;
     inputpw.value = "";
     inputpw2.value = "";
     inputpw2.setAttribute("boolean", "false");
+    checkObj[1] = false;
     samePw.innerHTML = "";
     inputName1.value = "";
     inputName1.setAttribute("boolean", "false");
+    checkObj[2] = false;
+    checkObj[3] = false;
     gender[0].checked = false;
     gender[1].checked = false;
     sameName.innerHTML = "";
     inputNum.value = "";
-    inputNum.setAttribute("boolean", "false");
+    checkObj[4] = false;
     inputEmail.value = "";
 }
 
@@ -286,28 +315,23 @@ reset1.addEventListener("click", () => {
 });
 
 document.querySelector("#test1").addEventListener("click", () => {
-    console.log(inputId);
-    console.log(inputpw);
-    console.log(inputpw2);
-    console.log(inputName1);
-    console.log(gender[0].checked);
-    console.log(gender[1]);
-    console.log(inputNum);
-});
+    console.log(checkObj[0]);
+    console.log(checkObj[1]);
+    console.log(checkObj[2]);
+    console.log(checkObj[3]);
+    console.log(checkObj[4]);
 
+});
 
 // 회원가입
 const createUser = document.querySelector("#createUser");
 createUser.addEventListener("click", () => {
 
-    if(inputId.boolean == true && inputpw2.boolean == true &&
-        inputpw.boolean == true && inputName1.boolean == true && inputNum.boolean == true && 
-        gender[0].checked ||
-        inputId.boolean == true && inputpw2.boolean == true &&
-        inputpw.boolean == true && inputName1.boolean == true && inputNum.boolean == true && 
-        gender[1].checked) {
-            alert("회원가입 완료");
-            clear();
+    if(checkObj[0] == true && checkObj[1] == true && 
+        checkObj[2] == true && checkObj[3] == true && 
+        checkObj[4] == true) {
+        alert("회원가입 완료");
+        clear();
     } else {
         alert("회원가입 실패");
         
