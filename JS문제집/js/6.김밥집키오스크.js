@@ -70,20 +70,28 @@ function addToCart(menu, price) {
     }
 
     // 메뉴 이름 배열
-    const menuName = document.querySelectorAll(".group")
-    const cntplus = document.querySelector(".count");
+    const testName = document.querySelectorAll(".group");
+    const testName2 = document.querySelectorAll(".menu-item");
 
     // createItem();
-
     if(cart.firstChild == null){
         createItem();
-    } else {
-        if(cart.lastChild.firstChild.firstChild.firstChild.textContent == menu){
-            alert();
-        } else {
-            createItem();
+    } 
+    // else if(cart.children.length == 1 ){
+    //     if(testName[0].firstChild.textContent == menu){
+    //         alert();
+    //         console.log("첫번째 else문입니다");
+    //     } else {
+    //         createItem();
+    //         console.log("첫번째 생성");
+    //     }
+    // } 
+
+    for(let i = 0; i < testName2.length; i++){
+        // console.log(testName2[i].firstChild);
+        for(let k = 0; k < testName.length; k++){
+            console.log(testName[k].firstChild);
         }
     }
     
 }
-
