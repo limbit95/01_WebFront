@@ -15,7 +15,11 @@ let menuAndQuantity = [["김밥", "라면", "튀김", "떡볶이", "돈까스", 
 //     우동 : 0
 // };
 
-let num = 1;
+
+
+
+
+let num = 0;
 
 // 메뉴 버튼 클릭 시 메뉴 이름과 메뉴 가격 요소
 function addToCart(menu, price) {
@@ -43,29 +47,24 @@ function addToCart(menu, price) {
     // 수량 조절 버튼 생성
     const quantityBtn1 = document.createElement("button");
     quantityBtn1.classList.add("plus");
-    quantityBtn1.setAttribute("onclick", "plus"+num+"()");
+    quantityBtn1.setAttribute("onclick", "plus("+num+")");
     quantityBtn1.innerHTML = "+";
     const quantityBtn2 = document.createElement("button");
     quantityBtn2.classList.add("minus");
-    quantityBtn2.setAttribute("onclick", "minus"+num+"()");
+    quantityBtn2.setAttribute("onclick", "minus("+num+")");
     quantityBtn2.innerHTML = "-"
-    num++;
 
     // 삭제 버튼 생성
     const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("delete-button")
+    deleteBtn.classList.add("delete-button");
+    deleteBtn.setAttribute("onclick", "del("+num+")");
     deleteBtn.innerHTML = "&times;"
 
     // h4 태그 생성
     const h4 = document.createElement("h4");
     h4.classList.add("cnt");
 
-    // 메뉴 개수 카운팅
-    for(let i = 0; i < menuAndQuantity[0].length; i++){
-        if(menu == menuAndQuantity[0][i]){
-            menuAndQuantity[1][i] += 1;
-        }
-    }
+    num++;
 
     function createItem() {
         // 생성한 카트 추가
@@ -88,6 +87,13 @@ function addToCart(menu, price) {
         span3.append(deleteBtn);
     }
 
+    // 메뉴 개수 카운팅
+    for(let i = 0; i < menuAndQuantity[0].length; i++){
+        if(menu == menuAndQuantity[0][i]){
+            menuAndQuantity[1][i] += 1;
+        }
+    }
+
     // 메뉴 이름 배열
     const testName = document.querySelectorAll(".group");
 
@@ -107,9 +113,9 @@ function addToCart(menu, price) {
 
         if(has == false){
             createItem();
-            
         } else {
-            // console.log("같은 요소가 있습니다");
+            console.log("같은 요소가 있습니다");
+            num--;
             for(let x = 0; x < testName.length; x++){
                 if(menu == testName[x].firstChild.textContent){
                 }
@@ -130,49 +136,41 @@ function addToCart(menu, price) {
         }
     }
 
-    // + 버튼 요소
-    const plus = document.querySelector(".plus");
 
+    
 
-}
-
-// 추가 버튼
-function plus1(){
-    console.log("김밥 추가");
-}
-function plus2(){
-    console.log("라면 추가");
-}
-function plus3(){
-    console.log("튀김 추가");
-}
-function plus4(){
-    console.log("떡볶이 추가");
-}
-function plus5(){
-    console.log("돈까스 추가");
-}
-function plus6(){
-    console.log("우동 추가");
 }
 
-function minus1(){
-    console.log("김밥 빼기");
+// 삭제 버튼 기능
+const del = document.querySelector(".delete-button");
+del.addEventListener("click", () => {
+    
+});
+
+
+// + 버튼 클릭시 menuAndQuantity 배열의 [1]에 해당하는 개수 증가
+function plus(number){
+
+    for(let i = 0; i < menuAndQuantity[0].length; i++){
+        if(cart.childNodes[number].firstChild.firstChild.firstChild.textContent 
+            == menuAndQuantity[0][i]){
+                menuAndQuantity[1][i] += 1;
+                cart.childNodes[number].childNodes[1].childNodes[1].innerHTML = menuAndQuantity[1][i];
+        }
+    }
 }
-function minus2(){
-    console.log("라면 빼기");
-}
-function minus3(){
-    console.log("튀김 빼기");
-}
-function minus4(){
-    console.log("떡볶이 빼기");
-}
-function minus5(){
-    console.log("돈까스 빼기");
-}
-function minus6(){
-    console.log("우동 빼기");
+
+// - 버튼 클릭시 menuAndQuantity 배열의 [1]에 해당하는 개수 감소
+function minus(number){
+
+    for(let i = 0; i < menuAndQuantity[0].length; i++){
+        if(menuAndQuantity[1][i] > 0 &&
+            cart.childNodes[number].firstChild.firstChild.firstChild.textContent 
+            == menuAndQuantity[0][i]){
+                menuAndQuantity[1][i] -= 1;
+                cart.childNodes[number].childNodes[1].childNodes[1].innerHTML = menuAndQuantity[1][i];
+        }
+    }
 }
 
 
@@ -182,24 +180,50 @@ function minus6(){
 const test1 = document.querySelector(".qwer");
 
 test1.addEventListener("click", () => {
-    console.log("a");
+
+    console.log();
+
 });
 
 
-// + 버튼
-// const plus = document.querySelectorAll(".plus");
 
-// for(let i = 0; i < cart.children.length; i++){
-//     plus[i].addEventListener("click", (e) => {
-       
-//         for(let i = 0; i < menuAndQuantity[0].length; i++){
-//             if(e.target.parentNode.previousSibling.firstChild.firstChild.textContent == 
-//                 menuAndQuantity[0][i]){
-
-//                 menuAndQuantity[1][i] += 1;
-//             }
-//         }           
-
-//         console.log("a");
-//     })
+// // 추가 버튼
+// function plus1(){
+//     console.log("김밥 추가");
 // }
+// function plus2(){
+//     console.log("라면 추가");
+// }
+// function plus3(){
+//     console.log("튀김 추가");
+// }
+// function plus4(){
+//     console.log("떡볶이 추가");
+// }
+// function plus5(){
+//     console.log("돈까스 추가");
+// }
+// function plus6(){
+//     console.log("우동 추가");
+// }
+
+// function minus1(){
+//     console.log("김밥 빼기");
+// }
+// function minus2(){
+//     console.log("라면 빼기");
+// }
+// function minus3(){
+//     console.log("튀김 빼기");
+// }
+// function minus4(){
+//     console.log("떡볶이 빼기");
+// }
+// function minus5(){
+//     console.log("돈까스 빼기");
+// }
+// function minus6(){
+//     console.log("우동 빼기");
+// }
+
+
