@@ -15,44 +15,6 @@ let menuAndQuantity = [["김밥", "라면", "튀김", "떡볶이", "돈까스", 
 //     우동 : 0
 // };
 
-function createCartItem(menu, price){
-
-    // 카트 생성
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
-
-    // 카트 안에 담길 메뉴 정보 생성
-    const menuItem = document.createElement("div");
-    menuItem.classList.add("menu");
-
-    // 카트 안의 세 영역으로 나눌 span 생성
-    const span1 = document.createElement("span");
-    const span2 = document.createElement("span");
-    span2.classList.add("quantity");
-    const span3 = document.createElement("span");
-    span3.classList.add("quantity");
-
-    // 수량 조절 버튼 생성
-    const quantityBtn1 = document.createElement("button");
-    quantityBtn1.classList.add("plus");
-    quantityBtn1.onclick = function() {increaseBtn(quantityBtn1)};
-    quantityBtn1.innerHTML = "+";
-    const quantityBtn2 = document.createElement("button");
-    quantityBtn2.classList.add("minus");
-    quantityBtn2.innerHTML = "-";
-
-    // 삭제 버튼 생성
-    const deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("delete-button");
-    // deleteBtn.setAttribute("onclick", "del("+num+")");
-    deleteBtn.innerHTML = "&times;";
-
-    // h4 태그 생성
-    const h4 = document.createElement("h4");
-    h4.classList.add("cnt");
-
-}
-
 
 
 
@@ -66,7 +28,40 @@ function addToCart(menu, price) {
     // 메뉴 추가시 "장바구니가 비어 있습니다" 칸 숨기기
     document.querySelector("#empty-cart").style.display = "none";
 
-    
+    // 메뉴 담을 카트 생성
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("cart-item");
+
+    // 카트 안에 담길 메뉴 정보 생성
+    const menuItem = document.createElement("div");
+    menuItem.classList.add("menu-item", "group");
+
+    // 카트 안의 세 영역으로 나눌 span 생성
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
+    span2.classList.add("quantity");
+    const span3 = document.createElement("span");
+    span3.classList.add("quantity");
+
+    // 수량 조절 버튼 생성
+    const quantityBtn1 = document.createElement("button");
+    quantityBtn1.classList.add("plus");
+    // quantityBtn1.setAttribute("onclick", "plus("+num+")");
+    quantityBtn1.innerHTML = "+";
+    const quantityBtn2 = document.createElement("button");
+    quantityBtn2.classList.add("minus");
+    // quantityBtn2.setAttribute("onclick", "minus("+num+")");
+    quantityBtn2.innerHTML = "-";
+
+    // 삭제 버튼 생성
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-button");
+    // deleteBtn.setAttribute("onclick", "del("+num+")");
+    deleteBtn.innerHTML = "&times;";
+
+    // h4 태그 생성
+    const h4 = document.createElement("h4");
+    h4.classList.add("cnt");
 
     num++;
 
